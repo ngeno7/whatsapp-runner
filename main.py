@@ -3,6 +3,9 @@ from runner.controllers import AnswerController
 from config import config
 import requests
 import json
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -45,9 +48,27 @@ def callback():
                     }
             })
         headers={"Content-Type": "application/json", "Authorization": f"Bearer {config['WhatsappAccessToken']}"}
-        requests.post(config['WhatsappURL'], data=data,
-            headers=headers)
+        #requests.post(config['WhatsappURL'], data=data,
+        #    headers=headers)
         return { "message": "Message sent successfully" }, 200
+
+@app.route('/chatbot', methods=['GET'])
+def chatbot():
+    bot = ChatBot(
+    'SQLMemoryTerminal',
+    # storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    database_uri=None,
+    read_only=True,
+    logic_adapters=[
+        'chatterbot.logic.BestMatch'
+    ])
+
+    corpus_trainer = ChatterBotCorpusTrainer(bot)
+    # corpus_trainer.train('chatterbot.corpus.english')
+    corpus_trainer.train('training_data.linux')
+    print(bot.get_response('List files'))
+
+    return "Success", 200
 
 if __name__ == '__main__':
     app.run()

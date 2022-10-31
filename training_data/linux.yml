@@ -1,0 +1,9 @@
+categories:
+- Linux
+conversations:
+- - 'List files and directories'
+  - 'ls Command is used. -a flag is used to display all files including the hidden ones. 
+    -l flag is used for displaying file properties such permissions, owner and time of creation'
+- - 'List directories'
+  - 'ls Command is used. -a flag is used to display all files including the hidden ones. 
+    -l flag is used for displaying file properties such permissions, owner and time of creation'
