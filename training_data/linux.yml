@@ -1,9 +1,37 @@
+---
 categories:
 - Linux
 conversations:
-- - 'List files and directories'
+- - 'list files and directories ls'
   - 'ls Command is used. -a flag is used to display all files including the hidden ones. 
     -l flag is used for displaying file properties such permissions, owner and time of creation'
-- - 'List directories'
+- - 'list directories ls'
   - 'ls Command is used. -a flag is used to display all files including the hidden ones. 
     -l flag is used for displaying file properties such permissions, owner and time of creation'
+- - 'create directory mkdir'
+  - 'mkdir command: used to create a directory.'
+- - 'create file touch'
+  - 'touch command is used to create files. '
+- - 'terminate a process kill killall'
+  - 'kill / killall: used to terminate or send it a signal'
+- - 'shutdown'
+  - 'shutdown: used to shutdown or reboot a process'
+- - 'move mv'
+  - 'mv command: move files and directories. used to rename file/directory too'
+- - 'copy cp scp'
+  - 'cp command: Used to copy files within the file system. scp is used to copy files remotely'
+  
+- - 'delete rm'
+  - 'rm command: delete file or directory. Has flags such as -rf'  
+- - 'change current directory'
+  - 'cd command: change current directory'
+- - 'view text file cat'
+  - 'cat command: view a text file'
+- - 'available space df'
+  - 'df command: used to check the available space in the filesystem. -h flag is used to show in human readable format.'
+- - 'list processes ps'
+  - 'ps command: list processes'
+- - 'create user account useradd'
+  - 'useradd command: create a user account'
+- - 'delete user account userdel'
+  - 'userdel command: delete a user account'
