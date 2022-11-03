@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-from runner.controllers import AnswerController
 from config import config
 import requests
 import json
@@ -10,7 +9,7 @@ application = Flask(__name__)
 
 @application.route('/')
 def answers():
-    return AnswerController.AnswerController().index()
+    return "Hello world"
 @application.route('/respond')
 def respond():
     data=json.dumps({
